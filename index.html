@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商業數據分析與圖像表達｜excel效率工作術｜經理人商學院</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hurricane&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: #eaf5f5;
+            background-image: url(hwimages/bg-01.png);
+            background-position: center 0;
+            background-repeat: repeat-y;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Hurricane', 'cursive';
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        /* ------------------------------------------------------- */
+        header{
+            background-color: #2c2c2c;
+            width: 100%;
+            position: fixed;
+            z-index: 99;
+        }
+        .brand{
+            width: 400px;
+        }
+        .header_img_r{
+            /* padding: 0px 40px; */
+            line-height: 1.6em;
+            font-weight: 700;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            float: right;
+        }
+        .header_img_l{
+            float: left;
+            position: relative;
+            top: 0px;
+            left: 20px;
+        }
+        .header_img_r a{
+            display: inline-block;
+            align-items: center;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            padding: 5px 15px;
+            border-radius: 55px;
+        }
+        header nav{
+            position: relative;
+            /* display: flex;
+            justify-content: space-between; */
+            align-items: center;
+            /* width: 70%; */
+            padding: 15px 30px;
+            height: 10%;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+        /* .container{
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        } */
+        .toadd, .toadd:visited{
+            background-color: #008954;
+            border-color: #008954;
+        }
+        .toadd:hover{
+            background-color: #22485a;
+        }
+        /* ------------------------------------------------------------ */
+        .data{
+            width: 100%;
+        }
+        .main_margin{
+            width: 70%;
+            margin: auto;
+            text-align: center;
+
+        }
+        .sectiontop{
+            padding-top: 90px;
+            padding-left: 15px;
+            padding-right: 15px;
+            
+        }
+        .sectionsecond{
+            text-align: center;
+            
+        }
+        h2{
+            padding: 20px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 36px;
+            color: #fff;
+            padding:50px 20px;
+        }
+        h3{
+            padding: 20px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 28px;
+        }
+        .second_bar{
+            background-color: #dae259;
+        }
+        .second_text_bg{
+            background-color: #008954;
+            overflow: auto;
+            padding-bottom: 50px;
+        }
+        .second_text_bg img{
+            width: 20%;
+            padding: 5px 10px;
+            margin: 15px;
+        }
+        .second_add{
+            /* display: inline-block; */
+            /* align-items: center; */
+            text-align: center;
+            float: left;
+            margin: 5px;
+            line-height: 2em;
+            padding: 5px 20px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .second_t{
+            color: #dae259;
+            font-size: 24px;
+                        
+        }
+        .sit{
+            clear: both;
+        }
+        /* -------------------------------------------------------------------- */
+        .ask{
+            background-color: #fff;
+            margin: auto;
+            overflow: auto;
+            padding-top: 30px;
+        }
+        .ask_h3{
+            padding: 50px;
+            font-size: 32px;
+            margin: auto;
+        }
+        .ask_img{
+            width: 80%; 
+            margin: auto; 
+            padding: 25px;
+        }
+        .sectionsp{
+            text-align: center;
+            margin: auto;
+            /* box-sizing: border-box; */
+        }
+        .spimg{
+            width: 100%;
+            padding: 0px 15px 0px;
+        }
+        .spdiv{
+            float: left;
+            padding: 0px 0px;
+            border: 4px solid #1e4757;
+            border-top: 0px;
+            margin: 0px 100px;            
+            box-shadow: 10px 10px 0px 0px #bbd6cdd9;
+            /* overflow: auto; */
+            /* width: 350px; */
+        }
+        .spdiv_r{
+            float: left;
+            padding: 0px 0px;
+            border: 4px solid #dae259;
+            border-top: 0px;
+            margin: 0px 90px;            
+            box-shadow: 10px 10px 0px 0px #bbd6cdd9;
+        }
+
+        .ask ol{
+            list-style-type: decimal;
+            text-align: left;
+            line-height: 2em;
+            padding: 0px 20px 0px 0px;
+            width: 100%;
+            margin: 10px 35px;
+            font-size: 18px;
+        }
+        .ask li{
+            padding: 0px 15px 0px 0px;
+        }
+        .sp_h3{
+            padding: 20px 65px;
+            text-align: left;
+            background-color: #1e4757;
+            border-top: 0px;
+            padding: 10px 0px 10px 20px;
+            color: #fff;
+            margin: 1px;
+
+        }
+        .sp_h3_r{
+            padding: 20px 65px;
+            text-align: left;
+            background-color: #dae259;
+            border-top: 0px;
+            padding: 10px 0px 10px 20px;
+            margin: 1px;
+
+        }
+        .sp_big{
+            padding: 0px 30px;
+        }
+        .sp{
+            background-color: #fff;
+            margin: auto;
+            overflow: auto;
+            padding-top: 10px;
+            padding-bottom: 35px;
+        }
+        /* --------------------------------------------------------------- */
+        .teacher_h2{
+            color: #008954;
+        }
+        .teacher_l{
+            float: left;
+            text-align: left;
+            line-height: 1.6em;
+        }
+        .teacher_p{
+            color: #008954;
+            font-size: 20px;
+            padding-bottom: 10px;
+        }
+        .teacher_span{
+            font-size: 28px;
+            line-height: 1.8em;
+            font-weight: 700;
+        }
+        .teacher_colorbar{
+            background-color: #008954;
+            color: #fff;
+            font-size: 26px;
+            line-height: 1.6em;
+            font-weight: 700;
+            padding: 3px 15px;
+        }
+        .speaker{
+            width: 60%;
+            /* position: relative; */
+        }
+        .teacher_r{
+            position: relative;
+            width: 50%;
+            height: 450px;
+            overflow: auto;
+        }
+        .speaker_tag{
+            position: absolute;
+        }
+        .speaker_n{
+            top: 66%;
+            right: 55px;
+            z-index: 5;
+            font-size: 28px;
+            background-color: #306a84;
+            color: #fff;
+            padding: 10px;
+        }
+        .speaker_nd{
+            top: 78%;
+            right: 55px;
+            z-index: 3;
+            background-color: #306a84;
+            color: #fff;
+            font-size: 20px;
+            pad: 5px;
+        }
+        .speaker_exp{
+            top: 85%;
+            right: 55px;
+            z-index: 10;            
+        }
+        .speaker_exp a, .speaker_exp a:visited{
+            background-color: #17a2b8;
+            text-decoration: none;
+            color: #fff;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        .teacher_l li, .teachertwo_r li{
+            list-style: disc;
+            margin: 10px 0px 0px 20px;
+            font-size: 20px;
+            /* font-weight: 700; */
+            line-height: 1.6em;
+        }
+        .teacherone{
+            margin-bottom: 25px;
+        }
+        .teachertwo_r{
+            float: right;
+            text-align: left;
+            line-height: 1.6em;
+        }
+        .teachertwo_l{
+            position: relative;
+            width: 45%;
+            height: 450px;
+            overflow: auto;
+            float: left;
+        }
+        .speakertwo_n{
+            top: 66%;
+            left: 55px;
+            z-index: 5;
+            font-size: 28px;
+            background-color: #306a84;
+            color: #fff;
+            padding: 10px;
+        }
+        .speakertwo_nd{
+            top: 78%;
+            left: 55px;
+            z-index: 3;
+            background-color: #306a84;
+            color: #fff;
+            font-size: 20px;
+            pad: 5px;
+        }
+        .speakertwo_exp{
+            top: 85%;
+            left: 55px;
+            z-index: 10;            
+        }
+        .speakertwo_exp a, .speakertwo_exp a:visited{
+            background-color: #17a2b8;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 3px;
+            padding: 5px;
+        }
+        .warn{
+            /* display: inline-block; */
+            width: 70%;
+            text-align: left;
+            padding: 25px 35px 45px;
+        }
+        /* ------------------------------------------------------------- */
+        .info{
+            background-color: #fff;
+            padding-bottom: 55px;
+        }
+        .info_h2{
+            color: #000;
+        }
+        .info_p{
+            text-align: left;
+            font-size: 24px;
+            line-height: 2em;
+        }
+        .info_aa{
+            text-decoration: none;
+            color: #fff;
+            margin: 15px;
+            overflow: auto;
+            line-height: 3em;
+            padding: 5px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .info_block{
+            margin: 3px 10px;
+            float: left;
+            width: 250px; 
+            height: 150px;
+            padding: 5px;    
+            line-height: 2em;   
+            border-radius: 5px;
+        }
+        .info_a{
+            background-color: #306a84;
+        }
+        .info_b{
+            background-color: #2d64a3;
+        }
+        .info_c{
+            background-color: #dae259;       
+        }
+        .info_c a{
+            color: #333;
+        }
+        .info_c a:hover{
+            color: #fff;
+        }
+        .info_d{
+            background-color: #008954;
+        }
+        .info_block:hover{
+            background-color: #6c757d;
+        }
+        .info_l{
+            float: left;
+            width: 50%;
+            /* overflow: auto; */
+        }
+        .info_r{
+            float: right;
+            width: 50%;
+        }
+        .info_r img{
+            width: 400px;
+        }
+        .info_p{
+            clear: both;
+            font-size: 16px;
+        }
+        .info_big{
+            font-size: 45px;
+        }
+        .info_mail{
+            color: #008954;
+            text-decoration: none;
+        }
+        /* ---------------------------------------- */
+        .ad{
+            background-color: #1e4757;
+        }
+        .ad_p{
+            color: #fff;
+            font-size: 20px;
+            line-height: 2em;
+            font-weight: 700;
+        }
+        .ad_container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+
+        }
+        .ad_btn{
+            background-color: #008954;
+            color: #fff;
+            font-size: 20px;
+            line-height: 2.7em;
+            margin: 15px;
+            width: 300px;
+            height: 180px;
+            border-radius: 10px;
+        }
+        .ad_btn_sp{
+            font-size: 48px;
+            font-weight: 700;
+        }
+        .ad_a, .ad_a:visited{
+            text-decoration: none;
+            color: #1e4757;
+            background-color: #dae259;
+            padding: 8px 20px;
+            border-radius: 55px;
+            font-weight: 700;
+        }
+        .ad_a:hover, .ad_a:active{
+            background-color: #1e4757;
+            color: #fff;
+        }
+        .ad_bar{
+            padding: 10px 15px 40px;
+        }
+        /* --------------------------------------- */
+        .relatived_container{
+            display: flex;
+            justify-content: center;
+            padding: 60px 0px;
+        } 
+        .relatived_img{
+            width: 85%;
+        }
+        .relatived_text{
+            text-align: left;
+        }
+        h4{
+            color: #d0416d;
+            line-height: 2em;
+            font-size: 36px;
+        }
+        h5{
+            line-height: 2em;
+            font-size: 36px;
+        }
+        .relatived_p{
+            line-height: 1.6em;
+        }
+        /* ---------------------------------------------- */
+        .student{
+            background-color: #008954;
+            position: relative;
+            height: 280px;
+        }
+        .student_p{
+            color: #fff;
+            font-size: 24px;
+            line-height: 1.6em;
+            text-align: center;
+        }
+        .student_sp{
+            font-size: 18px;
+            color: #fff;
+        }
+        .student_l{
+            color: #fff;
+            background-color: rgba(204, 204, 204, 0.5);
+            text-align: center;
+            align-items: center;
+            padding: 9px 12px;
+            position: absolute;
+            left: 25%;
+            top: 50%;
+        }
+        .student_r{
+            color: #fff;
+            background-color: rgba(204, 204, 204, 0.5);
+            text-align: center;
+            align-items: center;
+            padding: 9px 12px;
+            /* float: right; */
+            display: inline-block;
+            position: absolute;
+            right: 25%;
+            top: 50%;
+        }
+        /* ------------------------------------------------ */
+        .page{
+            background-color: #ebebeb;
+        }
+        .page h2{
+            color: #000;
+        }
+        .page_container{
+            display: flex;
+            justify-content: center;
+        }
+        .page_st{
+            background-image: url(hwimages/img-1569310651-59915@900.jpg);
+            background-position: center conter;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 5px solid #fff;
+            width: 300px;
+            height: 200px;
+            border-radius: 15px;
+            margin: 10px;
+            
+        }
+        .page_nd{
+            background-image: url(hwimages/img-1610094499-88643@900.jpg);
+            background-position: center conter;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 5px solid #fff;
+            width: 300px;
+            height: 200px;
+            margin: 10px;
+        }
+        .page_rd{
+            background-image: url(hwimages/pageb-01.png);
+            background-position: center conter;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 5px solid #fff;
+            width: 300px;
+            height: 200px;
+            margin: 10px;
+        }
+        .page_subcontainer{
+            display: flex;
+            justify-content: inherit;
+            width: 290px;
+            margin: 5px 30px 40px;
+        }
+        .page_subcontainer a, .page_subcontainer .ad_a:visited{
+            color: #000;
+            font-size: 16px;
+            text-decoration: none;
+            line-height: 1.5em;
+            padding: 10px;
+            text-align: left;
+        }
+        /* ---------------------------------------------------- */
+        .qna{
+            background-color: #fff;            
+        }
+        .qna h2{
+            color: #000;
+            padding: 50px 0px 40px;
+        }
+        .qna h5{
+            text-align: left;
+            font-size: 24px;
+            line-height: 1.8em;
+        }
+        .qna p{
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.6em;
+        }
+        .qna_div{
+            padding: 20px;
+            /* margin: 20px; */
+        }
+        /* ------------------------------ */
+        .announcement{
+            background-color: #c1c2c6;
+        }
+        .announcement div{
+            padding: 5px 10px 15px;
+        }
+        .announcement h5{
+            font-size: 24px;
+            text-align: left;
+            line-height: 2em;
+            color: #212529;
+        }
+        .announcement p{
+            font-size: 16px;
+            text-align: left;
+            line-height: 1.5em;
+            color: #212529;
+        }
+        /* ---------------------------------------------- */
+        footer{
+            background-color: #000;
+            padding: 10px;
+            overflow: auto;
+            position: relative;
+        }
+        footer p{
+            color: #fff;
+            clear: both;
+        }
+        .footer_container{
+            text-align: center;
+            width: 70%;
+            padding: 0px 20% 5px;
+            align-items: center;
+            display: inline-block;
+            /* position: absolute; */
+            right: 50%;
+            top: 50%;
+            
+        }
+        .footer_container p, .footer_container a, .footer_container a:visited{
+            font-size: 20px;
+            text-decoration: none;
+            color: #fff;
+            float: left;
+            padding: 20px 10px 15px;                       
+        }
+        .up{
+            display: inline-block;
+            position: fixed;
+            font-size: 30px;
+            font-weight: 800;
+            text-decoration: none;
+            color: #c1c2c6;
+            background-color: #1e4758;
+            width: 35px;
+            height: 35px;
+            bottom: 10px;
+            right: 20px;
+            border-radius: 50%;
+            padding: 10px;
+        }
+        .up:hover{
+            background-color: #306a84;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <header>
+            <nav class="container main_margin">
+                <div class="header_img_l">
+                    <a href="https://biz-school.bnextmedia.com.tw/business-manager?_gl=1*1vj36mz*_ga*ODQ5MDU4MDE0LjE1OTU0MTgzNzk.*_ga_383SSRZR6Z*MTY0OTE1MjI1MS43LjEuMTY0OTE1Mjk5OC42MA.." title="經理人商學院" class="logo" target="_blank" >
+                        <img class="brand" src="hwimages/mtschool-logo-21.png" alt="經理人商學院">
+                    </a>                
+                </div>
+                <div class="header_img_r">
+                    <a class="move" href="#teacher">精彩議程</a>
+                    <a class="move" href="#info">課程資訊</a>
+                    <a href="https://school.bnextmedia.com.tw/groupticket/" target="_blank">課程團票</a>
+                    <a href="https://eventgo.bnextmedia.com.tw/event/view/e50737u61e625f9a3bce" class="toadd" target="_blank">立即報名</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://edm.managertoday.com.tw/data/" target="_blank">
+                        <img src="hwimages/fb.png" alt="" width="90%">
+                    </a>
+                </div>
+                <div class="sit"></div>
+            </nav>
+        </header>
+        <section class="sectiontop main_margin" id="head">
+            <div>
+                <img src="hwimages/data.png" alt="data" class="data">
+            </div>
+        </section>
+        <section class="section_second">
+            <div>
+                <div class="second_bar">
+                    <h3 class="main_margin">
+                        <span class="text2">4/20 （三） </span><i class='fas fa-map-marker-alt' style='font-size:24px'> </i>中國文化大學建國本部(大夏館)
+                    </h3>
+                </div>
+                <div class="second_text_bg">
+                    <h2 class="main_margin">6小時課程，你將學到</h2>
+                    <div class="main_margin">
+                        <div class="second_text">
+                            <p class="second_add">
+                                <img src="hwimages/manager1.svg" alt="基礎觀念" ><br>
+                                <span class="second_t">基礎觀念</span> <br>
+                                正確解讀報表數據
+                            </p>
+                        </div>
+                        <div>
+                            <p class="second_add">
+                                <img src="hwimages/manager2.svg" alt="報表實戰" ><br>
+                                <span class="second_t">報表實戰</span> <br>
+                                樞紐分析工具應用
+                            </p>
+                        </div>
+                        <div>
+                            <p class="second_add">
+                                <img src="hwimages/manager3.svg" alt="商用圖表" ><br>
+                                <span class="second_t">商用圖表</span> <br>
+                                數據資料圖像化
+                            </p>
+                        </div>
+                    </div>                        
+                </div>
+            </div>
+            <div class="sit"></div>
+        </section>
+        <section class="ask">
+            <div class="main_margin">
+                <h3 class="ask_h3">
+                    你是不是常常遇到老闆說...
+                </h3>
+                <div>
+                    <img class="ask_img" src="hwimages/sketch.svg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="sp">
+            <div class="main_margin sectionsp ask">
+                <h3 class="ask_h3">
+                    這時你會選擇...
+                </h3>
+                <div>
+                    <div class="spdiv">
+                        <div>
+                            <h3 class="sp_h3">
+                                土法煉鋼法 - 手動修改
+                            </h3>
+                        </div>
+                        <div class="sp_big">
+                            <ol>
+                                <li>複製、貼上報表</li>
+                                <li>人工調整每項欄位資訊</li>
+                                <li>更改欄位數字</li>
+                                <li>查詢資料用滑鼠滾動每頁報表</li>
+                            </ol>
+                            <img src="hwimages/special_img2.svg" alt="" class="spimg">
+                        </div>
+                    </div>
+                    <div class="spdiv_r">
+                        <div>
+                            <h3 class="sp_h3_r">
+                                快速整理法 - 樞紐分析
+                            </h3>
+                        </div>
+                        <div class="sp_big">
+                            <ol>
+                                <li>選取資料範圍</li>
+                                <li>篩選維度</li>
+                                <li>報表製作完成、一目了然</li>
+                                <li style="list-style-type: none;padding: 3px;">&nbsp;</li>
+                            </ol>
+                            <img src="hwimages/special_img.svg" alt="" class="spimg">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </section>
+        <div style="background-color: #008954;">
+            <h3 class="main_margin" style="color: #fff;" id="teacher">
+                時間是最有限的資源，你需要一套高效率分析數據、產出報告的方法！
+            </h3>
+        </div>           
+        <section>
+            <div class="teacher">
+                <h2 class="main_margin teacher_h2" >精彩議程</h2>
+            </div>
+            <div class="main_margin teacherone">
+                <div class="teacher_l">
+                    <div>
+                        <p class="teacher_p">
+                            <span class="teacher_span">Part1 【數據分析力｜活用樞紐分析產製報表】</span><br>
+                            9:30-12:30
+                        </p>
+                    </div>
+                    <div class="teacher_colorbar">
+                        <p>
+                            學會Excel樞紐分析，<br>
+                            解決85%的資料分析需求！    
+                        </p>
+                    </div>
+                    <div>
+                        <ol>
+                            <li>
+                                概念建立：三大Excel核心觀念<br>
+                                掌握來源資料、善用內建工具、透通樞紐分析
+                            </li>
+                            <li>
+                                報表分析：商業報表製作實戰<br>
+                                統計：彙總統計表、年季月報表<br>
+                                比較：貢獻度報表<br>
+                                財務：YTD (年度累計分析)、YTD% (累計達成率分析)<br>
+                                關聯：互動式視覺化樞紐分析、關聯式樞紐分析
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="teacher_r">
+                    <img class="speaker" src="hwimages/speaker.png" alt="">
+                    <div class="speaker_tag speaker_n">
+                        <p>
+                            王作桓
+                        </p>
+                    </div>
+                    <div class="speaker_tag speaker_nd">
+                        <p>
+                            Microsoft MVP 微軟全球最有價值專家
+                        </p>
+                    </div>
+                    <div class="speaker_tag speaker_exp">
+                        <a href="">看講師簡介+</a>
+                    </div>
+                </div>
+            </div>
+            <div class="sit"></div>
+            <div class="main_margin">
+                <div class="teachertwo_l">
+                    <img class="speaker" src="hwimages/speaker2.png" alt="">
+                    <div class="speaker_tag speakertwo_n">
+                        <p>
+                            彭毅弘
+                        </p>
+                    </div>
+                    <div class="speaker_tag speakertwo_nd">
+                        <p>
+                            弘觀國際顧問簡報藝術烘焙坊 創辦人
+                        </p>
+                    </div>
+                    <div class="speaker_tag speakertwo_exp">
+                        <a href="">看講師簡介+</a>
+                    </div>
+                </div>
+                <div class="teachertwo_r">
+                    <div>
+                        <p class="teacher_p">
+                            <span class="teacher_span">Part2 【資訊圖表化｜ 將複雜資訊轉化圖像表達】</span><br>
+                            13:30-16:30
+                        </p>
+                    </div>
+                    <div class="teacher_colorbar">
+                        <p>
+                            善用資訊圖表，<br>
+                            1圖勝千言成為溝通的說服利器！
+                        </p>
+                    </div>
+                    <div>
+                        <ol>
+                            <li>
+                                將「資料」轉化為「資訊」<br>
+                                目的、邏輯與有效資訊的觀念
+                            </li>
+                            <li>
+                                圖表溝通<br>
+                                常見 15 種圖表的使用選擇與應用情境
+                            </li>
+                            <li>
+                                實戰應用<br>
+                                以Before/After案例破除直覺陷阱，運用圖表強調訴求與說服
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="sit"></div>
+            <div class="main_margin warn" id="info">
+                <p>
+                ※注意事項：上課請自備「Windows系統筆電」。Mac電腦操作介面將與示範有差異，請避免使用以完整學習。
+                </p>
+            </div>
+        </section>
+        <section class="info">
+            <div class="main_margin">
+                    <h2 class="info_h2">
+                        課程資訊
+                    </h2>
+                <div class="info_l">
+                    <div class="info_p">
+                        <p>時間：2022/04/20 (三) 9:30-16:30 <span style="font-size: 18px;">(9:00 開放報到)</span> <br>
+                        地點：中國文化大學建國本部(大夏館)<span style="font-size: 18px;">（台北市大安區建國南路二段231號）</span><br>
+                        票價費用：                    
+                        </p>
+                   </div>
+                    <div class="info_money">
+                        <div class="info_a info_block">
+                            <a href="https://eventgo.bnextmedia.com.tw/event/view/e50737u61e625f9a3bce?_gl=1*x0on5r*_ga*ODQ5MDU4MDE0LjE1OTU0MTgzNzk.*_ga_LJQ58J2DG7*MTY0OTE1MjI1MS43LjEuMTY0OTE1MjM5MS42MA..*_ga_383SSRZR6Z*MTY0OTE1MjI1MS43LjAuMTY0OTE1MjM5MS42MA..&_ga=2.5300275.1485921859.1649152298-1288889043.1648999190" class="info_aa" target="_blank">
+                                4/13前早鳥優惠<br>
+                                NT.<span class="info_big">4,000/</span>
+                                人
+                            </a>
+                        </div>
+                        <div class="info_b info_block">
+                            <a href="https://eventgo.bnextmedia.com.tw/event/view/e50737u61e625f9a3bce?_gl=1*5ngowt*_ga*ODQ5MDU4MDE0LjE1OTU0MTgzNzk.*_ga_LJQ58J2DG7*MTY0OTE1MjI1MS43LjEuMTY0OTE1MjM5MS42MA..*_ga_383SSRZR6Z*MTY0OTE1MjI1MS43LjAuMTY0OTE1MjM5MS42MA..&_ga=2.245501572.1485921859.1649152298-1288889043.1648999190" class="info_aa" target="_blank">
+                                三人以上團報<br>
+                                NT.<span class="info_big">3,700 /</span>
+                                人
+                            </a>
+                        </div>
+                        <div class="info_c info_block">
+                            <a href="https://eventgo.bnextmedia.com.tw/event/view/e50737u61e625f9a3bce?_gl=1*5ngowt*_ga*ODQ5MDU4MDE0LjE1OTU0MTgzNzk.*_ga_LJQ58J2DG7*MTY0OTE1MjI1MS43LjEuMTY0OTE1MjM5MS42MA..*_ga_383SSRZR6Z*MTY0OTE1MjI1MS43LjAuMTY0OTE1MjM5MS42MA..&_ga=2.245501572.1485921859.1649152298-1288889043.1648999190" class="info_aa" target="_blank">
+                                一般報名<br>
+                                NT.<span class="info_big">4,500/</span>
+                                人
+                            </a>
+                        </div>
+                        <div class="info_d info_block">
+                            <a href="https://eventgo.bnextmedia.com.tw/event/view/e50737u61e625f9a3bce?_gl=1*5ngowt*_ga*ODQ5MDU4MDE0LjE1OTU0MTgzNzk.*_ga_LJQ58J2DG7*MTY0OTE1MjI1MS43LjEuMTY0OTE1MjM5MS42MA..*_ga_383SSRZR6Z*MTY0OTE1MjI1MS43LjAuMTY0OTE1MjM5MS42MA..&_ga=2.245501572.1485921859.1649152298-1288889043.1648999190" class="info_aa" target="_blank">
+                                加值學習優惠<br>
+                                NT.<span class="info_big">4,600/</span>
+                                人
+                            </a>
+                        </div>
+                        <div class="sit"></div>
+                        <div>
+                            <p style="font-size: 14px;padding-left: 230px; color: #008954;">
+                                (課程學習加8期雜誌，共11期)
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="info_r">
+                    <a href="https://eventgo.bnextmedia.com.tw/event/view/e50737u61e625f9a3bce?_gl=1*kzndpc*_ga*ODQ5MDU4MDE0LjE1OTU0MTgzNzk.*_ga_LJQ58J2DG7*MTY0OTE1MjI1MS43LjEuMTY0OTE1MjM5MS42MA..*_ga_383SSRZR6Z*MTY0OTE1MjI1MS43LjAuMTY0OTE1MjM5MS42MA..&_ga=2.87231896.1485921859.1649152298-1288889043.1648999190">
+                        <img src="hwimages/sp_1-01.jpg" alt="" target="_blank">
+                    </a>
+                </div>    
+                <div class="info_p">
+                    ※以上課程皆附贈《經理人月刊》雜誌3期（5月號起送）<br>
+                    課程洽詢 (02)8773-9808#116洪小姐 <a class="info_mail" href="mailto:jenny.hung@bnext.com.tw">jenny.hung@bnext.com.tw</a><br>
+                    客服專線：02-8771-6326　 服務時間：週一到週五9:30~12:00；13:30~17:00<br>
+                    主辦單位保留活動及課程大綱異動之權利，更新資訊以活動網站內容為主。
+                </div>
+            </div>
+        </section>
+        <section class="ad">
+            <div class="main_margin">
+                <div>
+                    <h2>
+                        好評不斷！邁入開課第七年
+                    </h2>
+                </div>
+                <div>
+                    <p class="ad_p">
+                        搶先預約2022下半年度學習 <br>
+                        累計超過 <span style="color: #dae259; font-size: 30px;">3000</span> 位學員參與培訓，一致好評推薦！
+                    </p>
+                </div>
+                <div class="ad_container">
+                    <div class="ad_btn">
+                        <p>
+                            2022春季班 <br>
+                            <span class="ad_btn_sp">4/20</span> (三)
+                        </p>
+                        <a class="ad_a" href="https://eventgo.bnextmedia.com.tw/event/view/e50737u61e625f9a3bce?_gl=1*bd8lxe*_ga*ODQ5MDU4MDE0LjE1OTU0MTgzNzk.*_ga_LJQ58J2DG7*MTY0OTE1MjI1MS43LjEuMTY0OTE1MjM5MS42MA..*_ga_383SSRZR6Z*MTY0OTE1MjI1MS43LjAuMTY0OTE1MjM5MS42MA..&_ga=2.6479922.1485921859.1649152298-1288889043.1648999190" target="_blank">優惠倒數</a>
+                    </div>
+                    <div class="ad_btn">
+                        <p>
+                            2022秋季班 <br>
+                            <span class="ad_btn_sp">10/26</span> (三)
+                        </p>
+                        <a class="ad_a" href="https://eventgo.bnextmedia.com.tw/event/view/e82664u624313be8b6a6/?_gl=1*bd8lxe*_ga*ODQ5MDU4MDE0LjE1OTU0MTgzNzk.*_ga_LJQ58J2DG7*MTY0OTE1MjI1MS43LjEuMTY0OTE1MjM5MS42MA..*_ga_383SSRZR6Z*MTY0OTE1MjI1MS43LjAuMTY0OTE1MjM5MS42MA..&_ga=2.6479922.1485921859.1649152298-1288889043.1648999190" target="_blank">立即卡位</a>
+                    </div>
+                </div>
+                <div class="ad_bar">
+                    <a href="https://school.bnextmedia.com.tw/groupticket/" class="ad_bar" target="_blank">
+                        <img src="hwimages/banner.gif" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="main_margin">
+            <div class="relatived_container">
+                <div>
+                    <a href="https://edm.managertoday.com.tw/tableau/?utm_campaign=2022q1tableau&utm_source=data&utm_medium=rwdbar" target="_blank">
+                        <img class="relatived_img" src="hwimages/tableau_banner.jpeg" alt="">
+                    </a>
+                </div>
+                <div class="relatived_text">
+                    <div>
+                       <h4>
+                        相關課程
+                        </h4>
+                        <p class="relatived_p">
+                            #2022必學工具<br>
+                            不用死背公式，不需要拼湊圖表，超直覺的資訊圖表工具為你而生！
+                       </p>
+                    </div>
+                  <div>
+                     <h5>
+                        3/31 Tableau 實戰｜數據整理與商業圖表實作
+                      </h5>
+                       <p class="relatived_p">
+                        📍 資料探索Ｘ資料視覺化<br>
+                        📍 上機操作 X AI分析報告<br>
+                        📍 圖表類型 X 應用情境<br>
+                      </p>
+                   </div>
+               </div>
+            </div>
+        </section>
+        <section class="student">
+            <div class="main_margin student_container">
+                <h2>
+                    學員回饋
+                </h2>
+                <div>
+                    <div class="student_l"><p>&lt;</p></div>                    
+                    <div class="student_div">
+                        <p class="student_p">講師專業，內容實用！可以快速有效學習<br>
+                        <span class="student_sp">2021.02</span></p>
+                    </div>
+                    <div class="student_r"><p>&gt;</p></div>
+                </div>
+            </div>
+        </section>
+        <section class="page">
+            <div class="main_margin">
+                <div>
+                    <h2>
+                        相關學習文章
+                    </h2>
+                </div>
+                <div class="page_container">
+                    <div class="page_subcontainer"><a href="https://www.managertoday.com.tw/articles/view/58356?_gl=1*1nkoyci*_ga*ODQ5MDU4MDE0LjE1OTU0MTgzNzk.*_ga_LJQ58J2DG7*MTY0OTE1MjI1MS43LjEuMTY0OTE1Mjk5OC42MA..&_ga=2.159539582.2105434038.1649152298-849058014.1595418379" target="_blank"><div class="page_st"></div><p>別再一格格貼上！幫 Excel 報表的數值加單位，全部只要4步驟</p></a></div>
+                    <div class="page_subcontainer"><a href="https://www.managertoday.com.tw/articles/view/62266?_gl=1*1nkoyci*_ga*ODQ5MDU4MDE0LjE1OTU0MTgzNzk.*_ga_LJQ58J2DG7*MTY0OTE1MjI1MS43LjEuMTY0OTE1Mjk5OC42MA..&_ga=2.159539582.2105434038.1649152298-849058014.1595418379" target="_blank"><div class="page_nd"></div><p>如何用 Excel 分析 Google 問卷複選題？3 步驟快速整理複選資料</p></a></div>
+                    <div class="page_subcontainer"><a href="https://www.managertoday.com.tw/articles/view/51760?_gl=1*51p2e4*_ga*ODQ5MDU4MDE0LjE1OTU0MTgzNzk.*_ga_LJQ58J2DG7*MTY0OTE1MjI1MS43LjEuMTY0OTE1Mjk5OC42MA..&_ga=2.66282733.2105434038.1649152298-849058014.1595418379" target="_blank"><div class="page_rd"></div><p>Excel高手最愛用！3步驟學會超強大「樞紐分析」，資料處理再也不愁</p></a></div>
+                </div>
+            </div>
+        </section>
+        <section class="qna">
+            <div class="main_margin">
+                <h2>
+                    常見問題
+                </h2>
+                <div class="qna_div">
+                    <h5>Q. 我有購買課程團票方案，請問是否可以折抵於此課程？</h5>
+                    <p>可以的，提醒您，一人一堂課使用乙張票，恕不退還差價。</p>
+                </div>
+                <div class="qna_div"> 
+                    <h5>Q. 公司申請報帳有時間限制，付款後大概多久可以收到發票呢？</h5>
+                    <p>您付款完成後的兩週內，我們會將發票寄出。</p>
+                </div>
+                <div class="qna_div">
+                    <h5>Q. 付款後若臨時有行程更動，可以退費嗎？</h5>
+                    <p>若無法出席課程，請於課前來電或來信告知，可為您保留名額半年，半年內若對其他課程有興趣可轉移至該堂課 (金額不夠須補差額，若低於保留金額恕不另退費，限轉移乙次)；如需申請退款請於課程日前 8 日辦理，我們將收取課程的一成費用以及銀行轉帳之手續費，逾期恕不受理。例：8/5 課程申請退票日於 7/29 23:59 截止。</p>
+                </div>
+                <div class="qna_div">
+                    <h5>Q. 我們公司同事超過2位一起報名，可以分不同月份接續下去收件嗎？</h5>
+                    <p>2人以上報名，我們會自動做雜誌接續處理 ，統一給訂購人收件，同時發票開立一張，如果有不同需求再來電告知，謝謝。</p>
+                </div>
+            </div>
+        </section>
+        <section class="announcement">
+            <div class="main_margin">
+                <h5>課程提醒/公告</h5>
+                <p>• 第一線工作人員將全面配戴口罩 • 活動前主辦單位將確保會場桌面、麥克風、手把等均以酒精、清潔液消毒 • 課程與會者請全程戴口罩，具有慢性病及呼吸道症狀之來賓，請務必配戴口罩參加 • 報到前請配合量額溫、酒精消毒後方可入場 (若超過37.5度，將婉拒入場)</p>
+            </div>
+        </section>
+        <footer>
+            <div class="main_margin">
+                <div class="footer_container">
+                    <div><p>Bnext Media 媒體群 &nbsp; | </p></div>
+                    <div><a href="https://www.bnext.com.tw/?_gl=1*51p2e4*_ga*ODQ5MDU4MDE0LjE1OTU0MTgzNzk.*_ga_LJQ58J2DG7*MTY0OTE1MjI1MS43LjEuMTY0OTE1Mjk5OC42MA..&_ga=2.66282733.2105434038.1649152298-849058014.1595418379" target="_blank">數位時代</a></div>
+                    <div><a href="https://www.managertoday.com.tw/?_gl=1*1uxg8wz*_ga*ODQ5MDU4MDE0LjE1OTU0MTgzNzk.*_ga_LJQ58J2DG7*MTY0OTE1MjI1MS43LjEuMTY0OTE1Mjk5OC42MA..&_ga=2.87124187.2105434038.1649152298-849058014.1595418379" target="_blank">經理人</a></div>
+                    <div><a href="https://www.shoppingdesign.com.tw/?_gl=1*1uxg8wz*_ga*ODQ5MDU4MDE0LjE1OTU0MTgzNzk.*_ga_LJQ58J2DG7*MTY0OTE1MjI1MS43LjEuMTY0OTE1Mjk5OC42MA.." target="_blank">Shopping Design</a></div>
+                    <div><a href="https://meet.bnext.com.tw/?_gl=1*1uxg8wz*_ga*ODQ5MDU4MDE0LjE1OTU0MTgzNzk.*_ga_LJQ58J2DG7*MTY0OTE1MjI1MS43LjEuMTY0OTE1Mjk5OC42MA.." target="_blank">創業小聚</a></div>
+                    <div><a href="https://fc.bnext.com.tw/?_gl=1*48xyoz*_ga*ODQ5MDU4MDE0LjE1OTU0MTgzNzk.*_ga_LJQ58J2DG7*MTY0OTE1MjI1MS43LjEuMTY0OTE1Mjk5OC42MA.." target="_blank">未來商務</a></div>
+                </div>
+                <div><p>© 2021 Business Next Media Corp. All Rights Reserved. 106 台北市大安區光復南路102號9樓</p></div>
+            </div>
+            <a class="up" href="#head">&nbsp;Λ</a>
+        </footer>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
